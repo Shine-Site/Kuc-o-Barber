@@ -1,10 +1,10 @@
-# Weber Barber Barbearia — site e agenda
+# Kucão Barber Barbearia — site e agenda
 
 ## Arquivos
 - `index.html`: página, formulário de agendamento e painel administrativo.
 - `style.css`: visual responsivo.
 - `app.js`: horários, reservas e painel.
-- `assets/logo-weber-barber.png`: logo enviada, sem alterações.
+- `assets/logo-kucao-barber.png`: logo enviada, sem alterações.
 
 ## Testar
 Abra `index.html` no navegador. Para publicar, envie todos os arquivos mantendo a estrutura de pastas.
