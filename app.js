@@ -4,7 +4,7 @@ const OPEN_HOUR = 9;       // 09:00
 const CLOSE_HOUR = 19;     // último horário começa às 18:30
 const SLOT_MINUTES = 30;
 const CLOSED_DAYS = [0];   // 0 = domingo
-const STORAGE_KEY = "weberBarberAppointments_v1";
+const STORAGE_KEY = "kucaoBarberAppointments_v1";
 
 const $ = (s) => document.querySelector(s);
 const todayISO = () => { const d = new Date(); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,10); };
@@ -97,5 +97,5 @@ $("#filterDate").addEventListener("change",renderDashboard);$("#searchClient").a
 $("#exportBtn").addEventListener("click",()=>{
   const rows=[["Data","Hora","Nome","WhatsApp","Serviço","Observação","Status"],...getAppointments().map(a=>[a.date,a.time,a.name,a.phone,a.service,a.notes,a.status])];
   const csv=rows.map(r=>r.map(v=>'"'+String(v??"").replace(/"/g,'""')+'"').join(";")).join("\n");
-  const blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"});const url=URL.createObjectURL(blob);const link=document.createElement("a");link.href=url;link.download="agendamentos-weber-barber.csv";link.click();URL.revokeObjectURL(url);
+  const blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"});const url=URL.createObjectURL(blob);const link=document.createElement("a");link.href=url;link.download="agendamentos-kucao-barber.csv";link.click();URL.revokeObjectURL(url);
 });
